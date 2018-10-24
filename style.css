@@ -1,0 +1,23 @@
+html{
+    back-ground: yellow;
+}
+header{
+    font-size:30px;
+    background-color:blue;
+    color: #7FFF00;
+    ;
+}
+ul{
+    background-color:orange;
+    font-family: 'Times New Roman', Times, serif;
+}
+#places{
+    background-color: aqua;
+    color: orangered;
+}
+.body{
+    font-size: 15px;
+}
+.titles{
+    font-size: 20px;
+}
