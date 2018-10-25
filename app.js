@@ -71,36 +71,46 @@ var questionSix = parseInt(prompt("Guess my number between 1- 50."));
 console.log("user's answer to question six.", questionSix);
 var counter1 = 1;
 
-while(questionSix !== 34){
-  counter1++;
+while(questionSix !== 34 && counter1 < 4){
   if(questionSix < 34){
     questionSix = parseInt(prompt("Your number is too low. Try agian"));
+    counter1++;
   }
   else if(questionSix > 34){
     questionSix = parseInt(prompt("Your number is too high."));
-  }
-  else if(counter1 > 4){
-    alert("You ran out of attempts.")
-    break;
+    counter1++;
   }
 }
 if(questionSix == 34){
   alert("You guessed the right number!");
   correctAnswer++;
 }
+else{
+  alert("You are out of tries!");
+}
 
 //7th question with 6 chances to geuess a correct state.
 var questionSeven = prompt("Guess a state a state I have lived in").toLowerCase();
 console.log("user's answer to question seven.", questionSeven);
 var counter2 = 1;
-
-while (questionSeven !== "vermont" || questionSeven !== "massachusetts" || questoinSeven !== "missouri" || counter2 !== 6){
-  questionSeven=parseInt(prompt("Try again."));
+var stop = true;
+var answers=['vermont', 'massachusetts', 'missouri'];
+while(counter2 < 7 && stop == true){
+  for(var index = 0; index <= answers.length; index++){
+    if(questionSeven == answers[index]){
+      alert("You are correct!")
+      correctAnswer++;
+      stop = false;
+      break;
+    } 
+  } 
+  if(stop == false){
+    break;
+  }
+  else{
+  questionSeven = prompt("Try again.");
   counter2++;
-}
-if(questionSeven !== "vermont" || questionSeven !== "massachusetts" || questoinSeven !== "missouri"){
-  alert("You guessed right!");
-  correctAnswer++;
+  }
 }
 
 alert("You got " + correctAnswer + " questions right!");
