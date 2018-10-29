@@ -1,23 +1,40 @@
 html{
-    back-ground: yellow;
+    background-color:black;
 }
 header{
+    position: static;
+    margin-top: 90px;
+    margin-left: 20px;
     font-size:30px;
-    background-color:blue;
-    color: #7FFF00;
+    background-color:#7FFF00;
     ;
 }
 ul{
-    background-color:orange;
+    background-color: #7FFF00;
     font-family: 'Times New Roman', Times, serif;
 }
-#places{
-    background-color: aqua;
-    color: orangered;
+ol{
+    background-color: #7FFF00;
 }
 .body{
+    position: static;
+    margin-left: 20px; 
     font-size: 15px;
 }
 .titles{
+    position: static;
+    margin-left: 20px;
     font-size: 20px;
+    color: white;
+}
+p{
+    margin-left: 20px;
+    color:white;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+    width: 300px;
 }
